@@ -1,10 +1,8 @@
 package com.crud.user_registration.business;
 
-import com.crud.user_registration.infrastructure.entitys.User;
+import com.crud.user_registration.infrastructure.entity.User;
 import com.crud.user_registration.infrastructure.repository.UserRepository;
 import org.springframework.stereotype.Service;
-
-import java.util.Collections;
 
 @Service
 

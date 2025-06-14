@@ -1,6 +1,6 @@
 package com.crud.user_registration.infrastructure.repository;
 
-import com.crud.user_registration.infrastructure.entitys.User;
+import com.crud.user_registration.infrastructure.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.transaction.annotation.Transactional;
 

@@ -1,4 +1,4 @@
-package com.crud.user_registration.infrastructure.entitys;
+package com.crud.user_registration.infrastructure.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -7,12 +7,12 @@ import lombok.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-@Table(name = "user")
+@Table(name = "usuarios")
 @Entity
 public class User {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
     @Column(name = "email", unique = true)

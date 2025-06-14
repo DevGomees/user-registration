@@ -1,26 +1,26 @@
 package com.crud.user_registration.controller;
 
 import com.crud.user_registration.business.UserService;
-import com.crud.user_registration.infrastructure.entitys.User;
+import com.crud.user_registration.infrastructure.entity.User;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/usuario")
+@RequestMapping("/user")
 @RequiredArgsConstructor
 public class UserController {
     private final UserService userService;
 
     @PostMapping
-    public ResponseEntity<Void> saveUser(@RequestBody User user){
-        userService.saveUser(user);
+    public ResponseEntity<Void> createUser(@RequestBody User newUser){
+        userService.saveUser(newUser);
         return ResponseEntity.ok().build();
 
     }
 
     @GetMapping
-    public ResponseEntity<User> searchUserByEmail(@RequestBody String email){
+    public ResponseEntity<User> searchUserByEmail(@RequestParam String email){
         return ResponseEntity.ok(userService.searchUserByEamil(email));
     }
 
